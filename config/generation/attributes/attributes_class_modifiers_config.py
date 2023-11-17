@@ -1,0 +1,20 @@
+attributes_class_modifiers_config = {
+    "warrior": {"health": 20, "mana": 10, "stamina": 15},
+    "mage": {"health": 10, "mana": 30, "stamina": 10},
+    "thief": {"health": 15, "mana": 15, "stamina": 20},
+    "monk": {"health": 15, "mana": 20, "stamina": 15},
+    "assassin": {"health": 15, "mana": 15, "stamina": 20},
+    "bard": {"health": 15, "mana": 20, "stamina": 15},
+    "battlemage": {"health": 15, "mana": 25, "stamina": 10},
+    "crusader": {"health": 25, "mana": 15, "stamina": 10},
+    "knight": {"health": 25, "mana": 10, "stamina": 15},
+    "pilgrim": {"health": 15, "mana": 15, "stamina": 20},
+    "scout": {"health": 20, "mana": 15, "stamina": 15},
+    "sorcerer": {"health": 10, "mana": 35, "stamina": 5},
+    "spellsword": {"health": 20, "mana": 20, "stamina": 10},
+    "agent": {"health": 15, "mana": 15, "stamina": 20},
+    "archer": {"health": 20, "mana": 10, "stamina": 20},
+    "healer": {"health": 15, "mana": 25, "stamina": 10},
+    "rogue": {"health": 15, "mana": 10, "stamina": 25},
+    "witchhunter": {"health": 15, "mana": 25, "stamina": 10}
+}

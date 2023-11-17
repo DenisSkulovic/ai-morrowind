@@ -1,0 +1,22 @@
+from enum import Enum
+
+class CultureEnum(Enum):
+    ARGONIAN_TRIBAL = "Tribal Argonian"
+    BRETON = "Breton"
+    ASHLANDER = "Ashlander"
+    HLAALU = "Hlaalu"
+    REDORAN = "Redoran"
+    TELVANNI = "Telvanni"
+    ALDMERI = "Aldmeri High Elf"
+    IMPERIAL_CYR = "Cyrodiil Imperial"
+    IMPERIAL_NIB = "Nibenese Imperial"
+    IMPERIAL_COL = "Colovian Imperial"
+    KHAJIIT_ANEQ = "Anequina Khajiit"
+    KHAJIIT_PELL = "Pelletine Khajiit"
+    NORD = "Nord"
+    ORC_TRIBAL = "Tribal Orc"
+    REDGUARD_CROWN = "Crown Redguard"
+    REDGUARD_FOR = "Forebear Redguard"
+    BOSMER_VAL = "Valenwood Wood Elf"
+    COSMOP = "Empire Cosmopolitan"
+    BOUYANT_ARMIGER = "Buoyant Armiger Order Customs"

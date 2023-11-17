@@ -1,0 +1,15 @@
+birthsign_enum: dict[str, str] = {
+    "warrior": "The Warrior",
+    "mage": "The Mage",
+    "thief": "The Thief",
+    "serpent": "The Serpent",
+    "lady": "The Lady",
+    "steed": "The Steed",
+    "lord": "The Lord", 
+    "apprentice": "The Apprentice",
+    "atronach": "The Atronach",
+    "ritual": "The Ritual",
+    "lover": "The Lover",
+    "shadow": "The Shadow",
+    "tower": "The Tower",
+}

@@ -11,7 +11,7 @@ class AlchemyIngredientConfig:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "base_weight": 2, "effect_duration": 3, "effect1": 4, "effect2": 5, "effect3": 6, "effect4": 7}
+        self._cols = {"item": 0, "base_price": 1, "base_weight": 2, "effect_duration": 3, "effect1": 4, "effect2": 5, "effect3": 6, "effect4": 7}
         self._config = {
             AlchE.CRAB_MEAT.value: (Item, 1, 0.1, 30, EfE.RESTORE_FATIGUE.value, None, None, None),
             AlchE.DAEDRA_HEART.value: (Item, 200, 2.0, 60, EfE.RESTORE_HEALTH.value, EfE.FORTIFY_ENDURANCE.value, EfE.NIGHT_EYE.value, EfE.DRAIN_AGILITY.value),
@@ -41,4 +41,4 @@ class AlchemyIngredientConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Alchemy ingredient item name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}

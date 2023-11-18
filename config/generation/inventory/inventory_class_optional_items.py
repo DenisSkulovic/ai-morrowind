@@ -11,7 +11,7 @@ class InventoryClassOptionalItems:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "quantity": 1, "std_dev": 2, "probability": 3}
+        self._cols = {"item": 0, "quantity": 1, "std_dev": 2, "probability": 3}
         self._config = {
             "warrior": [
                 (ItCon().get("potion", PotE.RESTORE_HEALTH.value), 1, 0.50, 0.50),
@@ -106,8 +106,8 @@ class InventoryClassOptionalItems:
         """
         if character_class not in self._config:
             raise ValueError(f"Character class '{character_class}' not found in configuration.")
-        if property not in self._index:
+        if property not in self._cols:
             raise ValueError(f"Property '{property}' not found in configuration.")
-        index = self._index[property]
+        index = self._cols[property]
         return self._config[character_class][index][0]
 

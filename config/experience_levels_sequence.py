@@ -1,10 +1,11 @@
-from enum.experience_level_enum import experience_level_enum
+from enum.ExperienceLevelEnum import ExperienceLevelEnum
+
 
 experience_levels_sequence = [
-    experience_level_enum.beginner,
-    experience_level_enum.amateur,
-    experience_level_enum.adept,
-    experience_level_enum.expert,
-    experience_level_enum.master,
-    experience_level_enum.legend,
+    ExperienceLevelEnum.BEGINNER,
+    ExperienceLevelEnum.AMATEUR,
+    ExperienceLevelEnum.ADEPT,
+    ExperienceLevelEnum.EXPERT,
+    ExperienceLevelEnum.MASTER,
+    ExperienceLevelEnum.LEGEND,
 ]

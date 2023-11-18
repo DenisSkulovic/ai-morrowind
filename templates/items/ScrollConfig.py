@@ -10,7 +10,7 @@ class ScrollConfig:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "base_weight": 2, "effect": 3, "magnitude": 4, "duration": 5, "effect_range": 6}
+        self._cols = {"item": 0, "base_price": 1, "base_weight": 2, "effect": 3, "magnitude": 4, "duration": 5, "effect_range": 6}
         self._config = {
             ScrE.FIREBALL.value: (Scroll, 100, 0.1, E.FIRE_DAMAGE.value, 30, None, "distance"),
             ScrE.FROSTBITE.value: (Scroll, 100, 0.1, E.FROST_DAMAGE.value, 25, None, "touch"),
@@ -86,4 +86,4 @@ class ScrollConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Scroll name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}

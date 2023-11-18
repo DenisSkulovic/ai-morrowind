@@ -4,7 +4,7 @@ class BackgroundToClassMapProbabilities:
     Each class is represented by a tuple of 18 values: each value represents a probability of a background to have a class.
     """
     def __init__(self):
-        self._index = {"warrior": 0, "mage": 1, "thief": 2, "monk": 3, "assassin": 4, "barbarian": 5, "bard": 6, "crusader": 7, "knight": 8, "rogue": 9, "scout": 10, "sorcerer": 11, "spellsword": 12, "witchhunter": 13, "battlemage": 14, "healer": 15, "nightblade": 16, "archer": 17}
+        self._cols = {"warrior": 0, "mage": 1, "thief": 2, "monk": 3, "assassin": 4, "barbarian": 5, "bard": 6, "crusader": 7, "knight": 8, "rogue": 9, "scout": 10, "sorcerer": 11, "spellsword": 12, "witchhunter": 13, "battlemage": 14, "healer": 15, "nightblade": 16, "archer": 17}
         self._config = {
             "commoner": (0, 0, 0.25, 0, 0, 0, 0.20, 0, 0, 0, 0.15, 0, 0, 0, 0, 0, 0, 0),
             "guard": (0.15, 0, 0, 0, 0, 0, 0, 0.25, 0.35, 0, 0, 0, 0, 0, 0, 0, 0, 0.20),
@@ -47,9 +47,9 @@ class BackgroundToClassMapProbabilities:
         """
         if background not in self._config:
             raise ValueError(f"Background '{background}' not found in configuration.")
-        if character_class not in self._index:
+        if character_class not in self._cols:
             raise ValueError(f"Class '{character_class}' not found in configuration.")
-        index = self._index[character_class]
+        index = self._cols[character_class]
         return self._config[background][index]
         
     def get_class_probabilities(self, background: str) -> dict[str, float]:
@@ -65,4 +65,4 @@ class BackgroundToClassMapProbabilities:
         if background not in self._config:
             raise ValueError(f"Background '{background}' not found in configuration.")
         probabilities = self._config[background]
-        return {class_: prob for class_, prob in zip(self._index.keys(), probabilities) if prob > 0}
+        return {class_: prob for class_, prob in zip(self._cols.keys(), probabilities) if prob > 0}

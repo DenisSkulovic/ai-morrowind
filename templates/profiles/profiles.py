@@ -3,7 +3,7 @@ from enum.culture_enum import CultureEnum as C
 from enum.race_enum import RaceEnum as Ra
 from enum.religion_enum import ReligionEnum as Re
 from enum.faction_enum import FactionEnum as F
-from enum.background_type_enum import BackgroundTypeEnum as B
+from enum.BackgroundTypeEnum import BackgroundTypeEnum as B
 
 
 # common citizens of the empire, mostly cosmopolitan and worship nine divines, but dark elves are more rooted with vvardenfell - carry the local culture and worship the tribunal

@@ -9,9 +9,13 @@ class SoulGemConfig:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "base_weight": 2}
+        self._cols = {"item": 0, "base_price": 1, "base_weight": 2}
         self._config = {
-            SGemE.SOUL_GEM.value: (SoulGem, 100, 0.5),  # Placeholder price and weight, varies per gem
+            SGemE.PETTY_SOUL_GEM.value: (SoulGem, 40, 0.5),  # Petty Soul Gem
+            SGemE.LESSER_SOUL_GEM.value: (SoulGem, 150, 0.5),  # Lesser Soul Gem
+            SGemE.COMMON_SOUL_GEM.value: (SoulGem, 400, 0.5),  # Common Soul Gem
+            SGemE.GREATER_SOUL_GEM.value: (SoulGem, 1200, 0.5),  # Greater Soul Gem
+            SGemE.GRAND_SOUL_GEM.value: (SoulGem, 3500, 0.5),  # Grand Soul Gem
             SGemE.AZURAS_STAR.value: (SoulGem, 5000, 0.5),  # Azura's Star, unique soul gem
         }
         
@@ -32,4 +36,4 @@ class SoulGemConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Soul gem item name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}

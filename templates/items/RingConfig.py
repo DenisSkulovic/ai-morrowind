@@ -9,7 +9,7 @@ class RingEffectConfig:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "base_weight": 2, "effect": 3, "magnitude": 4}
+        self._cols = {"item": 0, "base_price": 1, "base_weight": 2, "effect": 3, "magnitude": 4}
         self._config = {
             RingE.REGENERATION_HEALTH.value: (Ring, 500, 0.1, E.REGENERATE_HEALTH, 25),
             RingE.REGENERATION_MAGICKA.value: (Ring, 500, 0.1, E.REGENERATE_MAGICKA, 25),
@@ -42,7 +42,7 @@ class RingEffectConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Ring name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}
 
 
 class RingSpellConfig:
@@ -52,7 +52,7 @@ class RingSpellConfig:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "base_weight": 2, "spell": 3, "magnitude": 4, "duration": 5, "soul_charge": 6, "effect_range": 7}
+        self._cols = {"item": 0, "base_price": 1, "base_weight": 2, "spell": 3, "magnitude": 4, "duration": 5, "soul_charge": 6, "effect_range": 7}
         self._config = {
             RingE.RESTORE_HEALTH.value: (Ring, 500, 0.1, E.RESTORE_HEALTH, 25, None, "self"),
             RingE.RESTORE_MAGICKA.value: (Ring, 500, 0.1, E.RESTORE_MAGICKA, 25, None, "self"),
@@ -91,5 +91,5 @@ class RingSpellConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Ring name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}
 

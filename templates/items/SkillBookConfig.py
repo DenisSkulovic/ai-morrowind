@@ -9,7 +9,7 @@ class SkillBookConfig:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "base_weight": 2, "skill_improvement": 3, "improved_skill": 4}
+        self._cols = {"item": 0, "base_price": 1, "base_weight": 2, "skill_improvement": 3, "improved_skill": 4}
         from enum.SkillEnum import SkillEnum as SE
         self._config = {
             SBkE.DANCE_IN_FIRE_VOL1.value: (SkillBook, 60, 1.0, 5, SE.ACROBATICS.value),
@@ -44,4 +44,4 @@ class SkillBookConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Skill book name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}

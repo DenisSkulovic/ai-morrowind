@@ -9,7 +9,7 @@ class MiscItemConfig:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "base_weight": 2}
+        self._cols = {"item": 0, "base_price": 1, "base_weight": 2}
         self._config = {
             MiscE.DRAKE.value: (Item, 1, 0.01),
             MiscE.BROOM.value: (Item, 10, 1.0),
@@ -41,4 +41,4 @@ class MiscItemConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Misc item name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}

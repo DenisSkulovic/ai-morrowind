@@ -7,7 +7,7 @@ class SpellConfig:
     Each spell is represented by a tuple of three values: effect, magnitude, type.
     """
     def __init__(self):
-        self._index = {"effect": 0, "magnitude": 1, "type": 2}
+        self._cols = {"effect": 0, "magnitude": 1, "type": 2}
         self._config = {
             SpellE.FIREBALL.value: (EfE.FIRE_DAMAGE.value, 30, "distance"),
             SpellE.FROSTBITE.value: (EfE.FROST_DAMAGE.value, 25, "touch"),
@@ -71,4 +71,4 @@ class SpellConfig:
         """
         if spell_name not in self._config:
             raise ValueError(f"Spell name '{spell_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[spell_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[spell_name])}

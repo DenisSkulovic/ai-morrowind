@@ -9,7 +9,7 @@ class ReadableBookConfig:
     If a value is not applicable, it is represented by None.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "content": 2}
+        self._cols = {"item": 0, "base_price": 1, "content": 2}
         self._config = {
             RBkE.LUSTY_ARGONIAN_MAID.value: (ReadableBook, 25, "Content of The Lusty Argonian Maid"),
             RBkE.BRIEF_HISTORY_EMPIRE.value: (ReadableBook, 30, "Content of A Brief History of the Empire"),
@@ -40,4 +40,4 @@ class ReadableBookConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Readable book name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}

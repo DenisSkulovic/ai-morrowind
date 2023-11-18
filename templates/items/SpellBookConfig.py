@@ -9,7 +9,7 @@ class SpellBookConfig:
     Each spell book is represented by a tuple of four values: item, base_price, base_weight, spell_name.
     """
     def __init__(self):
-        self._index = {"item": 0, "base_price": 1, "base_weight": 2, "spell_name": 3}
+        self._cols = {"item": 0, "base_price": 1, "base_weight": 2, "spell_name": 3}
         self._config = {
             SBkE.TOME_OF_FIREBALL.value: (SpellBook, 100, 1.0, SpellEnum.FIREBALL.value),
             SBkE.TOME_OF_FROSTBITE.value: (SpellBook, 80, 1.0, SpellEnum.FROSTBITE.value),
@@ -73,4 +73,4 @@ class SpellBookConfig:
         """
         if item_name not in self._config:
             raise ValueError(f"Spell book name '{item_name}' not found in configuration.")
-        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
+        return {key: value for key, value in zip(self._cols.keys(), self._config[item_name])}

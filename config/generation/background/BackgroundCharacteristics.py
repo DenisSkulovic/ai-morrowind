@@ -14,7 +14,7 @@ class BackgroundCharacteristics:
     - openness: 0 to 10, higher values represent higher openness. Reflects a character's readiness to share facts.
     """
     def __init__(self):
-        self._index = {"morality": 0, "intelligence": 1, "courage": 2, "talkativeness": 3, "extraversion": 4, "patience": 5, "empathy": 6, "openness": 7}
+        self._cols = {"morality": 0, "intelligence": 1, "courage": 2, "talkativeness": 3, "extraversion": 4, "patience": 5, "empathy": 6, "openness": 7}
         self._config = {
             "commoner": ((5, 2),(4, 2), (4, 2), (4, 2), (4, 2), (3, 2), (4, 2), (4, 2),),
             "guard": ((7, 2),(5, 2), (7, 2), (3, 2), (3, 2), (6, 2), (3, 2), (3, 2),),
@@ -58,8 +58,8 @@ class BackgroundCharacteristics:
         """
         if background not in self._config:
             raise ValueError(f"Background '{background}' not found in configuration.")
-        if characteristic not in self._index:
+        if characteristic not in self._cols:
             raise ValueError(f"Characteristic '{characteristic}' not found in configuration.")
-        index = self._index[characteristic]
+        index = self._cols[characteristic]
         return self._config[background][index]
 

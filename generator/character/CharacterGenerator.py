@@ -6,7 +6,7 @@ from classes.creatures.character.CharacterPersonalityTraits import CharacterPers
 from classes.creatures.character.CharacterProfile import CharacterProfile
 from classes.creatures.character.CharacterSkills import CharacterSkills
 from config.generation.attributes import attributes_base_config, attributes_class_modifiers_config, attributes_experience_level_modifiers
-from config.generation.background import background_to_characteristics_probabilities
+from config.generation.background.BackgroundCharacteristics import BackgroundCharacteristics
 from config.generation.location.pop_config import FINISH_________ME
 from enum.birthsign_enum import birthsign_enum
 from generator.character.CharacterClassGenerator import CharacterClassGenerator
@@ -135,7 +135,7 @@ class CharacterGenerator:
     def _generate_characteristics(self, character: Character) -> dict[str, int]:
         # Generate characteristics based on character's background
         background = character.get_background()
-        probabilities = background_to_characteristics_probabilities[background]
+        probabilities = BackgroundCharacteristics.get()[background]
 
         characteristics = {}
         for characteristic in probabilities:

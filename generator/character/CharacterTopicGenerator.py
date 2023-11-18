@@ -1,4 +1,5 @@
 from classes.creatures.character.Character import Character
+from classes.creatures.character.CharacterTopics import CharacterTopics
 
 
 class CharacterTopicGenerator:

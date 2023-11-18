@@ -1,3 +1,4 @@
+# TODO instead of strings for items, use templates
 class SwordHeavyKit:
     """
     This kit is designed for a warrior class character. It includes a long sword, a heavy shield, and a full set of heavy armor.
@@ -28,7 +29,6 @@ class BattleAxeHeavyKit:
             "shield": ["shield_heavy"],
             "armor": ["cuirass_heavy", "helmet_heavy", "greaves_heavy", "gauntlets_heavy", "boots_heavy", "pauldrons_heavy"]
         }
-
 class WarhammerHeavyKit:
     """
     This kit is designed for a warrior class character. It includes a warhammer and a full set of heavy armor.
@@ -38,7 +38,6 @@ class WarhammerHeavyKit:
             "weapon": ["warhammer"],
             "armor": ["cuirass_heavy", "helmet_heavy", "greaves_heavy", "gauntlets_heavy", "boots_heavy", "pauldrons_heavy"]
         }
-
 class BowHeavyKit:
     """
     This kit is designed for a warrior class character. It includes a bow, a short sword, arrows, and a set of heavy armor.
@@ -73,11 +72,11 @@ class PilgrimKit:
     """
     This kit is designed for a pilgrim class character. It includes a staff and a religious symbol.
     """
-        def __init__(self):
-            self.items = {
-                "weapon": ["staff"],
-                "misc": ["religious_symbol"]
-            }
+    def __init__(self):
+        self.items = {
+            "weapon": ["staff"],
+            "misc": ["religious_symbol"]
+        }
 class ScoutKit:
     """
     This kit is designed for a scout class character. It includes a dagger, a set of light armor, and a lockpick.
@@ -158,7 +157,6 @@ class BardLightKit:
             "weapon": ["dagger"],
             "armor": ["cuirass_light", "boots_light"]
         }
-
 class BattleMageMediumKit:
     """
     This kit is designed for a battlemage class character. It includes a staff, a long sword, a spell book with two spells, and a set of medium armor.
@@ -189,7 +187,6 @@ class AgentKit:
             "armor": ["cuirass_light", "boots_light"],
             "misc": ["lockpick"]
         }
-
 class ArcherKit:
     """
     This kit is designed for an archer class character. It includes a bow, arrows, and a set of light armor.
@@ -200,7 +197,6 @@ class ArcherKit:
             "misc": ["arrow"],
             "armor": ["cuirass_light", "boots_light"]
         }
-
 class HealerKit:
     """
     This kit is designed for a healer class character. It includes a spell book with two healing spells and healing potions.
@@ -210,7 +206,6 @@ class HealerKit:
             "spell_book": ["tome_of_healing", "tome_of_purification"],
             "misc": ["healing_potions"]
         }
-
 class RogueKit:
     """
     This kit is designed for a rogue class character. It includes a short sword, a dagger, a set of light armor, a lockpick, and a poison vial.
@@ -221,7 +216,6 @@ class RogueKit:
             "armor": ["cuirass_light"],
             "misc": ["lockpick", "poison_vial"]
         }
-
 class MageSpellBookKit:
     """
     This kit is designed for a mage class character. It includes a spell book with two spells and a mage's robe.
@@ -240,7 +234,6 @@ class MageStaffKit:
             "weapon": ["staff"],
             "robe": ["mage_robe"]
         }
-
 class ThiefKit:
     """
     This kit is designed for a thief class character. It includes a dagger, a short sword, a set of light armor, and a lockpick.
@@ -251,7 +244,6 @@ class ThiefKit:
             "armor": ["cuirass_light", "helmet_light", "boots_light"],
             "misc": ["lockpick"]
         }
-
 class WitchhunterMediumKit:
     """
     This kit is designed for a witchhunter class character. It includes a crossbow, a dagger, a spell book with two spells, a set of medium armor, and bolts.

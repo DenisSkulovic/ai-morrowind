@@ -2,7 +2,7 @@ import random
 from classes.Inventory import Inventory
 from classes.creatures.character.Character import Character
 from generator.ItemFactory import ItemFactory
-from config.generation.inventory.inventory_class_mandatory_items import inventory_class_mandatory_items
+from config.generation.inventory.InventoryClassMandatoryItems import inventory_class_mandatory_items
 from config.generation.inventory.inventory_class_optional_items import inventory_class_optional_items
 from config.generation.inventory.inventory_background_items import inventory_background_items
 

@@ -1,6 +1,6 @@
 from enum.items.ScrollEnum import ScrollEnum as ScrE
 from classes.items.consumable.Scroll import Scroll
-from enum.effect_enum import EffectEnum as E
+from enum.EffectEnum import EffectEnum as E
 
 
 class ScrollConfig:

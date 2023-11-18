@@ -1,6 +1,6 @@
 from enum.items.PotionEnum import PotionEnum as PotE
 from classes.items.consumable.Potion import Potion
-from enum.effect_enum import EffectEnum as E
+from enum.EffectEnum import EffectEnum as E
 
 
 class PotionConfig:

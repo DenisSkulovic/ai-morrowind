@@ -1,4 +1,4 @@
-from templates.items.ItemConfig import ItemConfig as ItCon
+from templates.items.RingConfig import ItemConfig as ItCon
 from enum.items.PotionEnum import PotionEnum as PotE
 from enum.items.RingEnum import RingEnum as RingE
 from enum.items.ScrollEnum import ScrollEnum as ScrE

@@ -1,4 +1,4 @@
-from classes.items.Weapon import Weapon
+from classes.items.weapon.Weapon import Weapon
 
 
 class MeleeWeapon(Weapon):

@@ -1,0 +1,28 @@
+from enum import Enum
+
+
+class RingEnum(Enum):
+    CHAMELEON = "ring_of_chameleon"
+    SURROUNDINGS = "ring_of_surroundings"
+    FIRESTORM = "ring_of_firestorm"
+    FROSTBITE = "ring_of_frostbite"
+    SHOCKWAVE = "ring_of_shockwave"
+    POISON_BLOOM = "ring_of_poison_bloom"
+    TELEKINESIS = "ring_of_telekinesis"
+    NIGHT_EYE = "ring_of_night_eye"
+    LEVITATION = "ring_of_levitation"
+    REGENERATION_HEALTH = "ring_of_health_regeneration"
+    REGENERATION_MAGICKA = "ring_of_magicka_regeneration"
+    REGENERATION_FATIGUE = "ring_of_fatigue_regeneration"
+    RESTORE_HEALTH = "ring_of_health_restore"
+    RESTORE_MAGICKA = "ring_of_magicka_restore"
+    RESTORE_FATIGUE = "ring_of_fatigue_restore"
+    FORTIFY_STRENGTH = "ring_of_fortify_strength"
+    FORTIFY_INTELLIGENCE = "ring_of_fortify_intelligence"
+    FORTIFY_SPEED = "ring_of_fortify_speed"
+    FORTIFY_ENDURANCE = "ring_of_fortify_endurance"
+    FORTIFY_PERSONALITY = "ring_of_fortify_personality"
+    FORTIFY_LUCK = "ring_of_fortify_luck"
+    FORTIFY_AGILITY = "ring_of_fortify_agility"
+    WATER_BREATHING = "ring_of_water_breathing"
+    INVISIBILITY = "ring_of_invisibility"

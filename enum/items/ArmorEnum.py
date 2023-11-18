@@ -1,0 +1,25 @@
+from enum import Enum
+
+
+class ArmorEnum(Enum):
+    HELMET_LIGHT = "helmet_light"
+    HELMET_MEDIUM = "helmet_medium"
+    HELMET_HEAVY = "helmet_heavy"
+    CUIRASS_LIGHT = "cuirass_light"
+    CUIRASS_MEDIUM = "cuirass_medium"
+    CUIRASS_HEAVY = "cuirass_heavy"
+    GREAVES_LIGHT = "greaves_light"
+    GREAVES_MEDIUM = "greaves_medium"
+    GREAVES_HEAVY = "greaves_heavy"
+    GAUNTLETS_LIGHT = "gauntlets_light"
+    GAUNTLETS_MEDIUM = "gauntlets_medium"
+    GAUNTLETS_HEAVY = "gauntlets_heavy"
+    BOOTS_LIGHT = "boots_light"
+    BOOTS_MEDIUM = "boots_medium"
+    BOOTS_HEAVY = "boots_heavy"
+    PAULDRONS_LIGHT = "pauldrons_light"
+    PAULDRONS_MEDIUM = "pauldrons_medium"
+    PAULDRONS_HEAVY = "pauldrons_heavy"
+    SHIELD_LIGHT = "shield_light"
+    SHIELD_MEDIUM = "shield_medium"
+    SHIELD_HEAVY = "shield_heavy"

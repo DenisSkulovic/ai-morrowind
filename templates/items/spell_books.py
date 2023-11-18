@@ -1,244 +1,47 @@
+from enum.items.SpellBookEnum import SpellBookEnum as SBkE
 from classes.items.book.SpellBook import SpellBook
 
-spell_books = {
-    "tome_of_fireball": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Fireball",
-            "base_price": 100,
-            "spell_name": "fireball",
+class SpellBookConfig:
+    """
+    This class represents the mapping of spell book items to their details.
+    Each spell book is represented by a tuple of four values: item, base_price, base_weight, spell_name.
+    """
+    def __init__(self):
+        self._index = {"item": 0, "base_price": 1, "base_weight": 2, "spell_name": 3}
+        self._config = {
+            SBkE.TOME_OF_FIREBALL.value: (SpellBook, 100, 1.0, "fireball"),
+            SBkE.TOME_OF_FROSTBITE.value: (SpellBook, 80, 1.0, "frostbite"),
+            SBkE.TOME_OF_LEVITATION.value: (SpellBook, 150, 1.0, "levitation"),
+            SBkE.TOME_OF_SUMMON_SCAMP.value: (SpellBook, 120, 1.0, "summon_scamp"),
+            SBkE.TOME_OF_HEALING.value: (SpellBook, 90, 1.0, "heal"),
+            SBkE.TOME_OF_NIGHT_EYE.value: (SpellBook, 70, 1.0, "night_eye"),
+            SBkE.TOME_OF_BOUND_SWORD.value: (SpellBook, 110, 1.0, "bound_sword"),
+            SBkE.TOME_OF_WATER_BREATHING.value: (SpellBook, 130, 1.0, "water_breathing"),
+            SBkE.TOME_OF_PARALYSIS.value: (SpellBook, 140, 1.0, "paralysis"),
+            SBkE.TOME_OF_CHAMELEON.value: (SpellBook, 100, 1.0, "chameleon"),
+            SBkE.TOME_OF_BOUND_BOW.value: (SpellBook, 110, 1.0, "bound_bow"),
+            SBkE.TOME_OF_SUMMON_SKELETON.value: (SpellBook, 120, 1.0, "summon_skeleton"),
+            SBkE.TOME_OF_CURE_COMMON_DISEASE.value: (SpellBook, 90, 1.0, "cure_common_disease"),
+            SBkE.TOME_OF_DETECT_CREATURE.value: (SpellBook, 70, 1.0, "detect_creature"),
+            SBkE.TOME_OF_DISPEL.value: (SpellBook, 80, 1.0, "dispel"),
+            SBkE.TOME_OF_FIRE_SHIELD.value: (SpellBook, 100, 1.0, "fire_shield"),
+            SBkE.TOME_OF_FROST_SHIELD.value: (SpellBook, 100, 1.0, "frost_shield"),
+            SBkE.TOME_OF_LIGHTNING_SHIELD.value: (SpellBook, 100, 1.0, "lightning_shield"),
+            SBkE.TOME_OF_MARK.value: (SpellBook, 150, 1.0, "mark"),
+            SBkE.TOME_OF_RECALL.value: (SpellBook, 150, 1.0, "recall"),
+            SBkE.TOME_OF_TELEKINESIS.value: (SpellBook, 120, 1.0, "telekinesis"),
+            SBkE.TOME_OF_WATER_WALKING.value: (SpellBook, 130, 1.0, "water_walking"),
+            SBkE.TOME_OF_FORTIFY_ATTRIBUTE.value: (SpellBook, 140, 1.0, "fortify_attribute"),
+            SBkE.TOME_OF_FORTIFY_SKILL.value: (SpellBook, 100, 1.0, "fortify_skill"),
         }
-    },
-    "tome_of_frostbite": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Frostbite",
-            "base_price": 80,
-            "spell_name": "frostbite",
-        }
-    },
-    "tome_of_levitation": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Levitation",
-            "base_price": 150,
-            "spell_name": "levitation",
-        }
-    },
-    "tome_of_summon_scamp": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Summon Scamp",
-            "base_price": 120,
-            "spell_name": "summon_scamp",
-        }
-    },
-    "tome_of_healing": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Healing",
-            "base_price": 90,
-            "spell_name": "heal",
-        }
-    },
-    "tome_of_night_eye": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Night Eye",
-            "base_price": 70,
-            "spell_name": "night_eye",
-        }
-    },
-    "tome_of_bound_sword": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Bound Sword",
-            "base_price": 110,
-            "spell_name": "bound_sword",
-        }
-    },
-    "tome_of_water_breathing": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Water Breathing",
-            "base_price": 130,
-            "spell_name": "water_breathing",
-        }
-    },
-    "tome_of_paralysis": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Paralysis",
-            "base_price": 140,
-            "spell_name": "paralysis",
-        }
-    },
-    "tome_of_chameleon": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Chameleon",
-            "base_price": 100,
-            "spell_name": "chameleon",
-        }
-    },
-    "tome_of_bound_bow": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Bound Bow",
-            "base_price": 110,
-            "spell_name": "bound_bow",
-        }
-    },
-    "tome_of_summon_skeleton": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Summon Skeleton",
-            "base_price": 120,
-            "spell_name": "summon_skeleton",
-        }
-    },
-    "tome_of_cure_common_disease": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Cure Common Disease",
-            "base_price": 90,
-            "spell_name": "cure_common_disease",
-        }
-    },
-    "tome_of_detect_creature": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Detect Creature",
-            "base_price": 70,
-            "spell_name": "detect_creature",
-        }
-    },
-    "tome_of_dispel": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Dispel",
-            "base_price": 80,
-            "spell_name": "dispel",
-        }
-    },
-    "tome_of_fire_shield": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Fire Shield",
-            "base_price": 100,
-            "spell_name": "fire_shield",
-        }
-    },
-    "tome_of_frost_shield": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Frost Shield",
-            "base_price": 100,
-            "spell_name": "frost_shield",
-        }
-    },
-    "tome_of_lightning_shield": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Lightning Shield",
-            "base_price": 100,
-            "spell_name": "lightning_shield",
-        }
-    },
-    "tome_of_mark": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Mark",
-            "base_price": 150,
-            "spell_name": "mark",
-        }
-    },
-    "tome_of_recall": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Recall",
-            "base_price": 150,
-            "spell_name": "recall",
-        }
-    },
-    "tome_of_telekinesis": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Telekinesis",
-            "base_price": 120,
-            "spell_name": "telekinesis",
-        }
-    },
-    "tome_of_water_walking": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Water Walking",
-            "base_price": 130,
-            "spell_name": "water_walking",
-        }
-    },
-    "tome_of_fortify_attribute": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Fortify Attribute",
-            "base_price": 140,
-            "spell_name": "fortify_attribute",
-        }
-    },
-    "tome_of_fortify_skill": {
-        "class": SpellBook,
-        "category": "book",
-        "subcategory": "spell_book",
-        "params": {
-            "name": "Tome of Fortify Skill",
-            "base_price": 100,
-            "spell_name": "fortify_skill",
-        }
-    },
-}
+
+    def get(self, item_name: str) -> dict:
+        """
+        This method returns the details of a given spell book.
+        The method takes one parameter: the name of the spell book.
+        The item_name parameter should be a string representing the name of the spell book.
+        The method returns a dictionary with keys: item, base_price, base_weight, spell_name.
+        """
+        if item_name not in self._config:
+            raise ValueError(f"Spell book name '{item_name}' not found in configuration.")
+        return {key: value for key, value in zip(self._index.keys(), self._config[item_name])}
